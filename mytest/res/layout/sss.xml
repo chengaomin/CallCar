@@ -1,26 +1,260 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="50dp"
-    android:orientation="horizontal" >
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity" >
+    
+        <RelativeLayout
+            android:id="@+id/top2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/title_bar" >
 
-    <ImageView
-        android:id="@+id/row_icon2"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:padding="10dp"
-        android:src="@drawable/ic_launcher" />
+            <Button
+                android:id="@+id/more1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="5.0dip"
+                android:layout_marginLeft="10.0dip"
+                android:background="@drawable/tab_settings_normal"
+                android:padding="5.0dip"
+                android:textColor="@android:color/white" />
 
-    <TextView
-        android:id="@+id/row_title3"
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20.0dip"
+                android:text="@string/beginPoint"
+                android:textColor="@android:color/white"
+                android:textSize="20.0sp" />
+
+        </RelativeLayout>
+<LinearLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/setting_common_bg"
+    android:orientation="vertical"
+    android:paddingLeft="12.0dip"
+    android:paddingRight="12.0dip"
+    android:paddingTop="24.0dip" >
+
+
+
+    <RelativeLayout
+        android:id="@+id/book_time"
+        android:layout_width="fill_parent"
+        android:layout_height="44.0dip"
+        android:background="@drawable/reserver_itembg_one"
+        android:clickable="true"
         android:gravity="center_vertical"
-        android:padding="10dp"
-        android:text="Medium Text"
-        android:textAppearance="@android:style/TextAppearance.Medium" />
+        android:orientation="vertical"
+        android:paddingLeft="12.0dip"
+        android:paddingRight="12.0dip" >
 
+        <ImageView
+            android:id="@+id/book_time_left_coin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/reservation_icon_time_nor" />
 
+        <ImageView
+            android:id="@+id/book_time_right_coin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/arrow_details" />
 
+        <TextView
+            android:id="@+id/book_time_text"
+            style="@style/setting_common_textview"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/book_time_right_coin"
+            android:layout_toRightOf="@id/book_time_left_coin"
+            android:hint="@string/book_time_hint"
+            android:paddingLeft="12.0dip"
+            android:paddingRight="12.0dip"
+            android:textColorHint="@color/about_us_copyright" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24.0dip"
+        android:background="@drawable/reserver_itembg_one"
+        android:orientation="vertical"
+        android:padding="1.0px" >
+
+        <RelativeLayout
+            android:id="@+id/book_city"
+            android:layout_width="fill_parent"
+            android:layout_height="44.0dip"
+            android:background="@drawable/reserver_itembg_top"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:paddingLeft="12.0dip"
+            android:paddingRight="12.0dip" >
+
+            <ImageView
+                android:id="@+id/book_city_left_coin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/reservation_icon_location" />
+
+            <ImageView
+                android:id="@+id/book_city_right_coin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/arrow_details" />
+
+            <TextView
+                android:id="@+id/book_city_text"
+                style="@style/setting_common_textview"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/book_city_right_coin"
+                android:layout_toRightOf="@id/book_city_left_coin"
+                android:hint="@string/book_choose_city"
+                android:paddingLeft="12.0dip"
+                android:paddingRight="12.0dip"
+                android:textColorHint="@color/about_us_copyright" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1.0px"
+            android:background="@color/setting_common_line" />
+
+        <RelativeLayout
+            android:id="@+id/book_from"
+            android:layout_width="fill_parent"
+            android:layout_height="44.0dip"
+            android:background="@drawable/reserver_itembg_center"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:paddingLeft="12.0dip"
+            android:paddingRight="12.0dip" >
+
+            <ImageView
+                android:id="@+id/book_from_left_coin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/icon_outset" />
+
+            <ImageView
+                android:id="@+id/book_from_right_coin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/arrow_details" />
+
+            <TextView
+                android:id="@+id/book_from_text"
+                style="@style/setting_common_textview"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/book_from_right_coin"
+                android:layout_toRightOf="@id/book_from_left_coin"
+                android:ellipsize="end"
+                android:hint="@string/book_from_hint"
+                android:paddingLeft="12.0dip"
+                android:paddingRight="12.0dip"
+                android:singleLine="true"
+                android:textColorHint="@color/about_us_copyright" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="1.0px"
+            android:background="@color/white"
+            android:paddingLeft="12.0dip" >
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1.0px"
+                android:background="@color/setting_common_line" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/book_to"
+            android:layout_width="fill_parent"
+            android:layout_height="44.0dip"
+            android:background="@drawable/reserver_itembg_bottom"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="12.0dip"
+            android:paddingRight="12.0dip" >
+
+            <ImageView
+                android:id="@+id/book_to_left_coin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/icon_destination" />
+
+            <ImageView
+                android:id="@+id/book_to_right_coin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/arrow_details" />
+
+            <TextView
+                android:id="@+id/book_to_text"
+                style="@style/setting_common_textview"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/book_to_right_coin"
+                android:layout_toRightOf="@id/book_to_left_coin"
+                android:ellipsize="end"
+                android:hint="@string/book_to_hint"
+                android:paddingLeft="12.0dip"
+                android:paddingRight="12.0dip"
+                android:singleLine="true"
+                android:textColorHint="@color/about_us_copyright" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="bottom" >
+
+        <Button
+            android:id="@+id/book_confirm"
+            android:layout_width="fill_parent"
+            android:layout_height="44.0dip"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="16.0dip"
+            android:background="@drawable/btn_book_confirm_cannot"
+            android:text="@string/book_confirm"
+            android:textColor="@color/white"
+            android:textSize="18.0sp" />
+    </RelativeLayout>
+
+</LinearLayout>
 </LinearLayout>

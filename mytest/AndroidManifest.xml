@@ -41,7 +41,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.example.mytest.editinfo" >
+        <activity android:name="com.example.mytest.editinfo" 
+            android:theme="@android:style/Theme.NoTitleBar">
         </activity>
     </application>
 
